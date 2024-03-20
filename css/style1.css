@@ -1,0 +1,102 @@
+body {
+    background: #fff;
+    /* background-image: linear-gradient( 135.9deg,rgba(109,25,252,1),rgba(125,31,10,1)); */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.vertical-nav{
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    box-shadow: 1px 1px 1px rgba(0,0,0,1);
+    transition: all 0.4s;
+}
+.page-content{
+    width: calc(100%-17rem);
+    margin-left: 17rem;
+    
+    min-height: 100vh;
+    /* transition: all; */
+}
+.content{
+    max-height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -17rem;
+}
+
+#content.active {
+    width: 100%;
+    margin: 0;
+}
+
+.separator{
+    margin: 0.5rem 0.5rem 0.5rem;
+}
+
+.text-uppercase {
+    letter-spacing: 0.1rem;
+}
+.status-message{
+    width: 98%;
+    border: 1px solid #9b8e8e;
+    background: #2c9551;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+    padding-right: 0px;
+    margin-right: 0;
+}
+
+.text-gray{
+    color: #aaa;
+}
+
+.nav-link{
+    text-transform: capitalize;
+}
+.nav-link:hover{
+    background: #f3f2f2;
+}
+.text-primary{
+    color: #7579e7 !important;
+}
+#interface{
+    width: calc(100%-17rem);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.account button{
+    padding: 0.25rem 3rem 0.25rem 3rem;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    /* background:#6cf; */
+}
+@media(max-width:768px){
+    #sidebar{
+        margin-left: -17rem;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+        margin: 0;
+    }
+    #content.active{
+        margin-left: 17rem;
+        width: calc(100%-17rem);
+    }
+}
